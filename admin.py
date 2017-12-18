@@ -61,8 +61,6 @@ while True:
 
 
     if choice == 'A':
-        # Add a new question.
-        # See Point 3 of the "Requirements of admin.py" section of the assignment brief.
         quest = inputSomething("Enter the question you would like to add:\n> ")
         ans = []
         while True:
@@ -86,8 +84,6 @@ while True:
 
 
     elif choice == 'L':
-        # List the current questions.
-        # See Point 4 of the "Requirements of admin.py" section of the assignment brief.
         if data == []:
             print("You have no questions")
             continue
@@ -99,7 +95,6 @@ while True:
 
     elif choice == 'S':
         # Search the current questions.
-        # See Point 5 of the "Requirements of admin.py" section of the assignment brief.
         # for string in data
         searchme = inputSomething("Enter your search term\n> ")
         foundsomething = False
@@ -116,7 +111,6 @@ while True:
 
     elif choice == 'V':
         # View a question.
-        # See Point 6 of the "Requirements of admin.py" section of the assignment brief.
         showme = inputInt("Enter in the question number you would like to view:\n> ") - 1
         if data == []:
             print("There is no data")
@@ -131,7 +125,6 @@ while True:
 
     elif choice == 'D':
         # Delete a question.
-        # See Point 7 of the "Requirements of admin.py" section of the assignment brief.
         deleteme = inputInt("Enter in the question number you would like to delete:\n> ") - 1
         try:
             if data[deleteme]:

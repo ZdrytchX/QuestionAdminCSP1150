@@ -1,4 +1,4 @@
-# Zachary Wibowanto
+# ZdrytchX
 
 # Import the required modules.
 import tkinter
@@ -43,10 +43,7 @@ class ProgramGUI:
             quit()#force exit, though user is given an option with risk
 
         # This is the constructor of the class.
-        # It is responsible for loading and reading the data file and creating the user interface.
-        # See Points 1 to 6 "Constructor of the GUI Class of quizle.py" section of the assignment brief.
         self.main = tkinter.Tk()
-        #self.main.geometry("720x128")
         self.main.title("Quizle the Quizzer")
         self.main.resizable(width=False, height=False)
 
@@ -90,10 +87,7 @@ class ProgramGUI:
 
         tkinter.mainloop()
 
-    def loadQuestion(self):
-        # This method is responsible for displaying a question in the GUI,
-        # as well as showing the special message for difficult questions and showing the user's current progress
-        # See Point 1 of the "Methods in the GUI Class of quizle.py" section of the assignment brief.
+    def loadQuestion(self):#display GUI questions
 
         if self.startupDone == False:#skip.
             self.buttonCheckAnswer.config(state="active")
@@ -125,10 +119,6 @@ class ProgramGUI:
 
 
     def checkAnswer(self):
-        # This method is responsible for determining whether the user's answer is correct and showing a Correct/Incorrect messagebox.
-        # It also checks how many questions have been asked to determine whether or not to end the game.
-        # See Point 2 of the "Methods in the GUI Class of quizle.py" section of the assignment brief.
-        #self.wrongimg = tkinter.Photoimage(file="nooooooo_luke_skywalker.gif")#XXX
         correct = False#Unless corrected, you are always wrong.
 
         #strip contents to its bare nakedness
@@ -152,11 +142,7 @@ class ProgramGUI:
                 tkinter.messagebox.showerror("Result:", "Wrong!\nYou might as well go onto the next question as answering this one will no longer earn you points.")
 
 
-            #self.imgbutton = tkinter.Button(self.checkAnswer,self.wrongimg, command=self.showBox)
-            #self.imgbutton.pack()
-
     def quit(self):
         quit()#quit ye stupid program
 
-# Create an object of the ProgramGUI class to begin the program.
 gui = ProgramGUI()
