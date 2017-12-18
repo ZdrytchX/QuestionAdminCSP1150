@@ -1,0 +1,52 @@
+import mandatory files
+
+#def inputInt
+    loop
+        ask for input with precursor
+        strip and integer check
+        else ask again
+
+#def inputSomething
+    loop
+        ask for input with precusros
+            try to strip cases/whitespaces
+            else ask again
+
+#def saveChanges(data table)
+    ask user if they want to save
+    dump to file. Since we're only using data.json we might as well ignore the input and assume data[] anyway.
+
+Try to load data.json and spit out basic info on its status.
+If we failed set data to a blank list.
+
+print whalecome message
+
+main loop:
+  print options "Choose [a]dd, [b]ackup, [l]ist, [s]earch, [v]iew, [d]elete or [q]uit"
+
+  Choices:
+    Add
+      Asks for string input
+        Asks for string answers
+        ask for new answers if wanted, use append() to add answers to set
+      Asks for integer for difficulty in range 1 to 5 or reprompt
+      Appends data to a dictionary format and stuff it into the data list
+    backup
+      prompts to save to file, use savechanges function. Will be called at least upon quitting as well.
+    List
+      Shows questions with a for loop
+      gives error if nothing found
+      Strip answers of the [squarebrackets]
+    Search
+      Searches questions with exact order of string
+      format is  data[index][dictionary]
+      Gives error if nothing found
+    View
+      View a specific question by list index number
+    Delete
+      Delete a question by index number
+    Quit
+      Quits by breaking out of looop
+    <Invalid>
+      Ask again by contineing.... wait do we need a continue here? It's a loop right??
+_____________________
